@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="16a95206-cc2a-495b-bcd0-8e7b0fae1a18">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     new_veh.`model` AS new_veh_model,
+     new_veh.`spec` AS new_veh_spec,
+     new_veh.`color` AS new_veh_color,
+     new_veh.`chessy` AS new_veh_chessy,
+     new_veh.`engin` AS new_veh_engin,
+     new_veh.`year` AS new_veh_year,
+     new_veh.`status` AS new_veh_status,
+     new_veh.`rno` AS new_veh_rno
+FROM
+     `new_veh` new_veh]]>
+	</queryString>
+	<field name="new_veh_model" class="java.lang.String"/>
+	<field name="new_veh_spec" class="java.lang.String"/>
+	<field name="new_veh_color" class="java.lang.String"/>
+	<field name="new_veh_chessy" class="java.lang.String"/>
+	<field name="new_veh_engin" class="java.lang.String"/>
+	<field name="new_veh_year" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="13" width="491" height="56" uuid="213798ed-2ca6-4619-aad5-fa0f7cab25db"/>
+				<textElement>
+					<font size="40"/>
+				</textElement>
+				<text><![CDATA[SACHINI TRADE CENTER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="100" height="20" uuid="3fc8e881-2a78-4811-abf9-bfa36a7b91f1"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="0" width="100" height="20" uuid="087d4f3f-bc0a-49fc-9258-ffb985c1d4aa"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SPESIFICATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="0" width="100" height="20" uuid="91bb2800-e8f2-4ee7-bb42-2e6b691238a8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COLOUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="100" height="20" uuid="107e12a6-3941-4973-ba59-c5f88b55cddf"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENGIN NO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="0" width="100" height="20" uuid="04e8c55f-6fa3-4651-bfc9-620eaf598097"/>
+				<textFieldExpression><![CDATA[$F{new_veh_model}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="0" width="100" height="20" uuid="f284a4ed-5e26-4370-8c91-9893a536f567"/>
+				<textFieldExpression><![CDATA[$F{new_veh_spec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="267" y="0" width="100" height="20" uuid="a0a44664-bfed-4596-b0c3-576989e4c3b0"/>
+				<textFieldExpression><![CDATA[$F{new_veh_color}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="100" height="20" uuid="e6a21e39-390f-42ed-9f00-ee091b8dc0a1"/>
+				<textFieldExpression><![CDATA[$F{new_veh_engin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="2" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="2" splitType="Stretch"/>
+	</summary>
+</jasperReport>
